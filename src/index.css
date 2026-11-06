@@ -1,0 +1,23 @@
+@tailwind base;@tailwind components;@tailwind utilities;
+html{scroll-behavior:smooth}
+body{background:#080A0D;color:#F4F4F4;font-family:'Space Grotesk',system-ui,sans-serif;overflow-x:hidden}
+::selection{background:#FF8A24;color:#080A0D}
+:focus-visible{outline:2px solid #FF8A24;outline-offset:3px}
+.bg-grid{background-image:linear-gradient(rgba(255,138,36,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(255,138,36,.05) 1px,transparent 1px);background-size:56px 56px;-webkit-mask-image:radial-gradient(ellipse at 50% 25%,#000 25%,transparent 80%);mask-image:radial-gradient(ellipse at 50% 25%,#000 25%,transparent 80%)}
+.glow{position:absolute;left:0;top:0;width:500px;height:500px;border-radius:9999px;background:radial-gradient(circle,rgba(255,138,36,.11),transparent 65%);will-change:transform}
+.ring{position:absolute;left:0;top:0;width:10px;height:10px;border-radius:9999px;background:#FF8A24;opacity:0;transition:opacity .3s}
+@media(pointer:coarse){.glow,.ring{display:none}}
+.card{position:relative;overflow:hidden;border-radius:.75rem;border:1px solid rgba(255,138,36,.18);background:#141A20;transition:border-color .3s,box-shadow .3s}
+.card:hover{border-color:rgba(255,138,36,.6);box-shadow:0 0 28px -8px rgba(255,138,36,.45)}
+.card::after{content:'';position:absolute;left:0;right:0;top:0;height:2px;background:linear-gradient(90deg,transparent,#FF8A24,transparent);opacity:0;pointer-events:none}
+.card:hover::after{opacity:1;animation:scan 1.6s linear infinite}
+@keyframes scan{from{transform:translateY(-4px)}to{transform:translateY(320px)}}
+.btn{display:inline-flex;align-items:center;gap:.5rem;border-radius:.5rem;padding:.7rem 1.2rem;font-weight:500;transition:transform .2s,background .2s,box-shadow .2s,color .2s}
+.btn:active{transform:scale(.97)}
+.btn-p{background:#FF8A24;color:#080A0D}.btn-p:hover{background:#FFB15C;box-shadow:0 0 24px rgba(255,138,36,.4)}
+.btn-g{border:1px solid rgba(255,138,36,.4);color:#FF8A24}.btn-g:hover{background:rgba(255,138,36,.1);color:#FFB15C}
+.tag{border:1px solid rgba(255,138,36,.18);border-radius:9999px;padding:.15rem .65rem;font-size:.75rem;color:#9BA4AE;font-family:'JetBrains Mono',monospace}
+@keyframes flow{to{stroke-dashoffset:-24}}.flow{stroke-dasharray:6 6;animation:flow 1s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}.orbit{transform-origin:200px 80px;animation:spin 28s linear infinite}
+@keyframes blink{50%{opacity:.3}}.node{animation:blink 2s ease-in-out infinite}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
