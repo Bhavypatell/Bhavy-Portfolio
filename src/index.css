@@ -1,0 +1,16 @@
+@tailwind base;@tailwind components;@tailwind utilities;
+html{scroll-behavior:smooth}
+body{background:#F1F0EA;color:#171B22;font-family:'IBM Plex Sans',system-ui,sans-serif;overflow-x:hidden}
+::selection{background:#D87839;color:#fff}
+:focus-visible{outline:2px solid #376A9B;outline-offset:3px}
+.blueprint{background-image:linear-gradient(#376A9B14 1px,transparent 1px),linear-gradient(90deg,#376A9B14 1px,transparent 1px);background-size:32px 32px}
+.lbl{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.06em}
+.btn{display:inline-flex;align-items:center;gap:.5rem;padding:.75rem 1.15rem;font-weight:500;border:1px solid #172B45;transition:background .2s,color .2s}
+.btn-p{background:#172B45;color:#FAF9F5}.btn-p:hover{background:#D87839;border-color:#D87839}
+.btn-g{color:#172B45}.btn-g:hover{background:#172B45;color:#FAF9F5}
+.dark .btn-p{background:#D87839;border-color:#D87839;color:#171B22}.dark .btn-p:hover{background:#FAF9F5;border-color:#FAF9F5}
+.dark .btn-g{color:#FAF9F5;border-color:#FAF9F566}.dark .btn-g:hover{background:#FAF9F5;color:#172B45}
+.chip{font-family:'IBM Plex Mono',monospace;font-size:12px;border:1px solid currentColor;padding:.1rem .5rem;opacity:.85}
+@keyframes flow{to{stroke-dashoffset:-20}}.flow{stroke-dasharray:5 5;animation:flow 1.2s linear infinite}
+@keyframes pulse{50%{opacity:.35}}.pulse{animation:pulse 2s ease-in-out infinite}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
